@@ -1,22 +1,40 @@
-# auth-api-program-ai
+# 🚀 Auth API -- Programa.AI
 
-API de autenticação desenvolvida como parte do curso de AppSec da
-**Programa.AI**.\
+API de autenticação desenvolvida como parte do curso de **AppSec da
+Programa AI**.\
 Este projeto utiliza **Flask**, **Flask-Migrate** e **SQLAlchemy** para
-gerenciar a aplicação e o banco de dados.
+gerenciamento de banco de dados e migrações.
 
 ------------------------------------------------------------------------
 
-## 🚀 Como executar o projeto
+## 📦 Tecnologias Utilizadas
 
-### 1. Clonar o repositório
+-   Python 3.x\
+-   Flask\
+-   Flask SQLAlchemy\
+-   Flask Migrate\
+-   SQLite (padrão) ou outro banco configurado\
+-   Virtualenv (recomendado)
+
+------------------------------------------------------------------------
+
+## ▶️ Como rodar o projeto
+
+### 1️⃣ Clone o repositório
 
 ``` bash
-git clone https://github.com/seu-usuario/auth-api-program-ai.git
-cd auth-api-program-ai
+git clone https://github.com/seu-usuario/auth-api-programa-ai.git
+cd auth-api-programa-ai
 ```
 
-### 2. Criar e ativar um ambiente virtual (opcional, mas recomendado)
+### 2️⃣ Crie e ative o ambiente virtual
+
+**Linux/macOS**
+
+``` bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
 **Windows**
 
@@ -25,34 +43,17 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-**Linux/Mac**
-
-``` bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Instalar as dependências
+### 3️⃣ Instale as dependências
 
 ``` bash
 pip install -r requirements.txt
 ```
 
-### 4. Configurar variáveis de ambiente
-
-Crie um arquivo **.env** na raiz do projeto e defina variáveis como:
-
-    FLASK_APP=app.py
-    FLASK_ENV=development
-    DATABASE_URL=sqlite:///app.db
-
-Ajuste conforme o banco de dados que estiver usando.
-
 ------------------------------------------------------------------------
 
-## 🗄️ Gerenciamento do banco de dados
+## 🗃️ Configuração do Banco de Dados (Flask-Migrate)
 
-### 1. Inicializar o diretório de migrações
+### 1. Inicializar as migrações
 
 ``` bash
 flask db init
@@ -72,24 +73,42 @@ flask db upgrade
 
 ------------------------------------------------------------------------
 
-## ▶️ Executar a aplicação
-
-Após configurar o ambiente e o banco de dados, execute:
+## ▶️ Executando a API
 
 ``` bash
 flask run
 ```
 
-A aplicação estará disponível em:
+API disponível em:
 
     http://127.0.0.1:5000
 
 ------------------------------------------------------------------------
 
-## 📚 Tecnologias utilizadas
+## 🧩 Estrutura Geral do Projeto
 
--   Python + Flask\
--   Flask-Migrate\
--   SQLAlchemy\
--   Alembic\
--   Python-dotenv
+    auth-api/
+    │── app/
+    │   ├── models/
+    │   ├── routes/
+    │   ├── __init__.py
+    │   ├── config.py
+    │── migrations/
+    │── venv/
+    │── requirements.txt
+    │── README.md
+    └── run.py / app.py
+
+------------------------------------------------------------------------
+
+## 📌 Variável FLASK_APP
+
+``` bash
+export FLASK_APP=app
+```
+
+Windows:
+
+``` bash
+set FLASK_APP=app
+```
