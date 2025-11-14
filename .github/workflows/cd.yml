@@ -25,4 +25,4 @@ jobs:
 
       # Step 2: roda o script de deploy local
       - name: Confirmação de deploy local
-        run: echo "Deploy local concluído — código já está atualizado na máquina local!"
+        run: echo ""
